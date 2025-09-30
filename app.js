@@ -3,6 +3,8 @@ const UsersModel = require('./model/users')
 const { connectDB } = require("./db")
 const usersRoute = require('./routes/users')
 require("dotenv").config()
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 const PORT = process.env.PORT || 8000
 const app = express()
