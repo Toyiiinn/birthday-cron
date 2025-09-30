@@ -1,0 +1,23 @@
+{
+  "name": "birthday-cron",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Toyin",
+  "license": "ISC",
+  "description": "Third semester assignment",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "croner": "^9.1.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.2",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.6",
+    "nodemon": "^3.1.10"
+  }
+}
