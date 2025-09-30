@@ -1,21 +1,21 @@
 const express = require('express')
+const bodyParser = require('body-parser')  
 const UsersModel = require('./model/users')
 const { connectDB } = require("./db")
 const usersRoute = require('./routes/users')
 require("dotenv").config()
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 
 const PORT = process.env.PORT || 8000
-const app = express()
+const app = express() 
 
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
-
 app.use('/', usersRoute);
-
 
 app.get('/', (req, res) => {
   res.render('index', { message: null, error: null });
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 require('./croner');
 
-// Connect to database and start server
+
 connectDB();
 
 app.listen(PORT, () => {
