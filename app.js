@@ -7,7 +7,7 @@ require("dotenv").config()
 const PORT = process.env.PORT || 8000
 const app = express()
 
-require('./ejs')(app);
+require('ejs')(app);
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
